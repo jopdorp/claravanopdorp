@@ -1,0 +1,5 @@
+<div class="jumbotron text-center">
+{% for page in view.pages %}
+  <span><a href="{{ page.path }}">{{ page.title }}</a></span>
+{% endfor %}
+</div>

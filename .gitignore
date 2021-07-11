@@ -1,2 +1,4 @@
 .idea
 *.iml
+db.sqlite3
+__pycache__
