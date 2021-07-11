@@ -1,8 +1,16 @@
-<div class="jumbotron text-center">
+<div class="jumbotron">
+  <div class="container">
+    <div class="row align-items-center">
 {% for footer_section in view.footer_sections %}
-  <div>
-  {{ footer_section.title }}
-  {{ footer_section.content|safe }}
-  </div>
+        <div class="col">
+            <div>
+                {{ footer_section.title }}
+            </div>
+            <div>
+                {{ footer_section.content|safe }}
+            </div>
+        </div>
 {% endfor %}
+    </div>
+  </div>
 </div>
