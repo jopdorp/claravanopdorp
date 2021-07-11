@@ -10,6 +10,3 @@ class Page(models.Model):
 
     def __str__(self):
         return 'Page: ' + self.title
-
-    class Meta:
-        db_table = 'claravanopdorp_page'

@@ -1,5 +1,7 @@
 from django.views.generic.base import TemplateView
 from web.models.page import Page
+from web.models.footer_section import FooterSection
+
 
 class Home(TemplateView):
     template_name = "main.jinja2"
@@ -10,4 +12,6 @@ class Home(TemplateView):
         if(page_path):
             self.current_page = Page.objects.get(path=page_path)
         self.pages = Page.objects.filter(is_in_menu=True)
+
+        self.footer_sections = FooterSection.objects.all()
         return super(Home, self).dispatch(request, *args, **kwargs)

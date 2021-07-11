@@ -1,11 +1,8 @@
-<div>
+<div class="jumbotron text-center">
+{% for footer_section in view.footer_sections %}
   <div>
-    contact:
-    <div>
-      <a href="mailto:"></a>
-    </div>
-    <div>
-      063846775
-    </div>
+  {{ footer_section.title }}
+  {{ footer_section.content|safe }}
   </div>
+{% endfor %}
 </div>
