@@ -19,8 +19,5 @@ class Migration(migrations.Migration):
                 ('content', models.TextField()),
                 ('is_in_menu', models.BooleanField()),
             ],
-            options={
-                'db_table': 'claravanopdorp_page',
-            },
         ),
     ]
