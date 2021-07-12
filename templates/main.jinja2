@@ -32,4 +32,11 @@
   </footer>
 </body>
 
+
+<div class="container">
+{% for section in view.page_sections %}
+  {% include "section.jinja2" %}
+{% endfor %}
+</div>
+
 </html>
