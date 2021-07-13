@@ -19,24 +19,35 @@
   <header>
     {% include "menu.jinja2" %}
   </header>
-  <div class="container">
-    <div class="row">
-      <h1>{{ view.current_page.title }}</h1>
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>{{ view.current_page.title }}</h1>
+          <div>
+          {{ view.current_page.content|safe }}
+          </div>
+        </div>
+      </div>
+      {% for section in view.page_sections %}
+      {% include "section.jinja2" %}
+      {% endfor %}
     </div>
-    <div class="row">
-      {{ view.current_page.content|safe }}
-    </div>
+
+  </div>
+
+
+  </div>
+
+
   </div>
   <footer>
     {% include "footer.jinja2" %}
   </footer>
 </body>
 
-
-<div class="container">
-{% for section in view.page_sections %}
-  {% include "section.jinja2" %}
-{% endfor %}
 </div>
 
 </html>
