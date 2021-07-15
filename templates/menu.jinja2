@@ -11,8 +11,8 @@
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav">
       {% for page in view.menu_pages %}
-        <li class="nav-item">
-          <a class="nav-link nav-link{% if view.current_page.path == page.path %} active{% endif %}" href="{{page.path}}">{{page.title}}</a>
+        <li class="nav-item ms-auto">
+          <a class="nav-link {% if view.current_page.path == page.path %} active{% endif %}" href="{{page.path}}">{{page.title}}</a>
         </li>
       {% endfor %}
       </ul>
