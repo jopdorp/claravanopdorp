@@ -14,7 +14,7 @@ class Home(TemplateView):
             self.current_page = Page.objects.get(path=page_path)
             self.page_sections = PageSection.objects.filter(page=self.current_page)
 
-        self.pages = Page.objects.filter(is_in_menu=True)
+        self.menu_pages = Page.objects.filter(is_in_menu=True)
 
         self.footer_sections = FooterSection.objects.all()
         return super(Home, self).dispatch(request, *args, **kwargs)
