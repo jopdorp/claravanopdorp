@@ -1,12 +1,11 @@
-<nav class="navbar navbar-light navbar-expand-sm fixed-top menu">
-  <a class="navbar-brand" href="/home">
-    <img src="/static/web/favicon.png" alt="logo" width=70 height=70>
-  </a>
+<nav class="navbar navbar-light navbar-expand-md fixed-top menu">
+
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="menu">
+    <a class="navbar-brand" href="/home">
+      <img src="/static/web/favicon.png" alt="logo" width=70 height=70>
+    </a>
+
+    <div class="collapse navbar-collapse show" id="menu">
       <ul class="navbar-nav">
       {% for page in view.menu_pages %}
         <li class="nav-item ms-auto-show">
