@@ -2,6 +2,6 @@
 *.iml
 db.sqlite3
 __pycache__
-static/
+/static/
 venv/
 .DS_Store
