@@ -96,3 +96,15 @@ h1 {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+@supports (backdrop-filter: blur()) {
+    .footer .col div {
+        backdrop-filter: blur(1.5px);
+    }
+}
+
+@supports not (backdrop-filter: blur()) {
+    .footer .col div {
+        background: white;
+    }
+}
