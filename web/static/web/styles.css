@@ -13,38 +13,38 @@ h1 {
   padding-bottom: 100px;
 }
 
+.navbar {
+    padding-bottom: 40px;
+    background-color: white;
+    z-index: 10;
+}
 .navbar-nav  {
+    padding-top: 30px;
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
 .navbar-brand {
-    width: 0;
-    margin-left: 0px;
-    margin-right: -25px;
+    z-index: 20;
+    width: 70px;
+    height: 70px;
     padding-left: 25px;
-    padding-top: 15px;
+    padding-top: 25px;
+    position: fixed;
 }
 
 .navbar-expand-sm .navbar-nav {
     min-width: 610px
 }
 
-.show .ms-auto-show, .collapsing .ms-auto-show {
-    margin-left: auto;
-}
-
 .navbar .container-fluid, .footer .container, .main-content {
     max-width: 870px;
 }
 
-
-button.navbar-toggler.nav>li>a.dropdown-toggle {
-
-    display: none;
+.navbar-toggler {
+    margin-top:30px;
 }
-
 
 .nav .dropdown-menu {
     display:block;
@@ -58,17 +58,17 @@ button.navbar-toggler.nav>li>a.dropdown-toggle {
     box-shadow: none;
 }
 
-.wrapper {
-    margin-right: auto; /* 1 */
-    margin-left:  auto; /* 1 */
-
-    max-width: 960px; /* 2 */
-
-    padding-right: 10px; /* 3 */
-    padding-left:  10px; /* 3 */
+.main-content {
+    padding-top: 100px;
 }
 
-.main-content {
-  padding-top: 170px;
-  padding-bottom: 100px;
+.main-content img {
+    width: 100%;
+}
+
+.footer {
+    background-color: white;
+}
+.footer .row {
+    padding :0;
 }
