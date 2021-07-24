@@ -58,6 +58,10 @@ h1 {
     box-shadow: none;
 }
 
+.show .nav-item {
+    margin-left: auto;
+}
+
 .main-content {
     padding-top: 100px;
 }

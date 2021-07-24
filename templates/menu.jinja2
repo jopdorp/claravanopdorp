@@ -3,13 +3,13 @@
 </a>
 <nav class="navbar fixed-top navbar-expand-md navbar-light">
   <div class="container-fluid">
-    <button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav">
         {% for page in view.menu_pages %}
-        <li class="nav-item ms-auto">
+        <li class="nav-item">
           <a class="nav-link {% if view.current_page.path == page.path %} active{% endif %}" href="{{page.path}}">{{page.title}}</a>
         </li>
       {% endfor %}
