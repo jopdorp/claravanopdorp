@@ -8,8 +8,12 @@
     src: url("fonts/Prata-Regular.ttf");
 }
 
+h1,h2,h3, .navbar {
+    font-family: Prata-Regular;
+}
+
 body {
-  font: 1rem/1.5 var(--bs-font-sans-serif);
+  font-family: Roboto, sans-serif;
 }
 h1 {
   font-size: 3.5rem;
