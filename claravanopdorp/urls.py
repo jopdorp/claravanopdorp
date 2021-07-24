@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from web.views import index
+from web.views import index, robots
 from django.views.generic.base import RedirectView
 from django.contrib.staticfiles.storage import staticfiles_storage
 
 
 urlpatterns = [
+    path("robots.txt", robots.robots_txt),
     path('admin/', admin.site.urls),
     path('', index.Home.as_view()),
     path(
