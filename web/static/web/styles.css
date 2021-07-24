@@ -58,7 +58,7 @@ h1 {
     box-shadow: none;
 }
 
-.show .nav-item {
+.show .nav-item, .collapsing .nav-item {
     margin-left: auto;
 }
 
