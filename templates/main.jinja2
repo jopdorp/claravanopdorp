@@ -17,13 +17,15 @@
   {% include "menu.jinja2"%}
   <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
   <div class="container main-content">
-    <div class="row">
-      <div class="col">
-        <div>
-        {{ view.current_page.content|safe }}
+    {%  if view.current_page.content %}
+      <div class="row">
+        <div class="col">
+          <div>
+          {{ view.current_page.content|safe }}
+          </div>
         </div>
       </div>
-    </div>
+    {% endif %}
     {% for section in view.page_sections %}
     {% include "section.jinja2" %}
     {% endfor %}
