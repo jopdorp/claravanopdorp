@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-m1n3f!q7u@tbhh(a_f2sb-jo-nyoamlf0$n1+8yi5^_=lcyz8r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['claravanopdorp.nl', 'jopdorp.pythonanywhere.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['claravanopdorp.com', 'www.claravanopdorp.com', 'jopdorp.pythonanywhere.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'web.apps.WebConfig'
+    'web.apps.WebConfig',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +81,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
