@@ -29,10 +29,20 @@ def get_favicon_paths():
         RedirectView.as_view(url=staticfiles_storage.url("web/favicons/" + name)),
     ) for name in filenames]
 
+app_name = "main"
+
+from web.views import index, robots, contact
+from django.contrib.staticfiles.storage import staticfiles_storage
+from os import listdir
+from pathlib import Path
+from django.views.generic import RedirectView
+
 urlpatterns = [
     path("robots.txt", robots.robots_txt),
     path('admin/', admin.site.urls),
-    path('', RedirectView.as_view(url="/home")),
+    path('', RedirectView.as_view(url="/home"), name="home"),
 ] + get_favicon_paths() + [
+    path("contact", contact.contact, name="contact"),
     path('<page>', index.Home.as_view()),
-]
+    ]
+

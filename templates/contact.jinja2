@@ -1,0 +1,17 @@
+<div style="margin-top:80px; margin-bottom: 80px">
+  <h1 class="h2">Have an idea or wanna collaborate?</h1>
+  <h2 class="h6">Let me know how can I help and I'll reach you as soon as possible</h2>
+
+  <form method="post" class="contact-form">
+    {% csrf_token %}
+
+        <span>Hello, I'm </span> {{ form.full_name }} <span>, let's talk about a potential project.
+        contact me at </span> {{ form.email_address }} <span> or call me </span> {{ form.phone_number }}
+        <br/>
+        <br/>
+        <div> I want to share you...</div>
+        <br/>
+        <div class="mb-3">{{ form.message }}</div>
+        <button type="submit" class="btn btn-sm btn-dark">Send</button>
+  </form>
+</div>
