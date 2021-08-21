@@ -16,12 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-import web
-from web.views import index, robots, contact
-from django.contrib.staticfiles.storage import staticfiles_storage
-from os import listdir
-from pathlib import Path
-from django.views.generic import RedirectView
+
 
 def get_favicon_paths():
     filenames = listdir(Path(__file__).parent.absolute().__str__() + "/../web/static/web/favicons/")
@@ -31,6 +26,12 @@ def get_favicon_paths():
     ) for name in filenames]
 
 app_name = "main"
+
+from web.views import index, robots, contact
+from django.contrib.staticfiles.storage import staticfiles_storage
+from os import listdir
+from pathlib import Path
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path("robots.txt", robots.robots_txt),
