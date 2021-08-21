@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'web.apps.WebConfig',
     'django_quill',
+    'mjml',
 ]
 
 

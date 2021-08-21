@@ -46,7 +46,7 @@ def contact(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
 
-            return redirect("home")
+            return redirect("/message-received")
 
     form = ContactForm()
     template = loader.get_template('main.jinja2')

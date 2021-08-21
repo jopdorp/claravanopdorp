@@ -1,16 +1,60 @@
-<html>
+{% load mjml %}
+{% mjml %}
 
-<h1> Hi {{ full_name }},</h1>
-<br>
-<h3> Nice to meet you!</h3>
-<p>
-  This is Clara van Opdorp, here we create brilliant experiences that helps you get the best from your ideas and business by <developing></developing> websites that suits your needs and market.
-  <br/>
-  Thanks for reaching out, I'm looking forward to having a look at your proposal.
-  <br/>
-  As soon as I've read through it, I'll contact you.
-</p>
-<img>
-<img src="https://live.staticflickr.com/5167/5340309206_e592a0c4c3_b.jpg" width="100%">
-</body>
-</html>
+  <mjml>
+    <mj-head>
+      <mj-attributes>
+        <mj-all
+            font-family="Roboto, sans-serif"
+        />
+      </mj-attributes>
+    </mj-head>
+    <mj-body>
+      <mj-section padding-bottom="0">
+        <mj-column>
+          <mj-text>
+
+            <h1> Hi {{ full_name }}</h1>
+            <br/>
+          </mj-text>
+        </mj-column>
+        <mj-column padding-left="120px">
+          <mj-image href="https://claravanopdorp.com" src="https://claravanopdorp.com/static/web/logo.png"
+                    alt="typing cat" width="115px"
+                    padding-top="22px"/>
+        </mj-column>
+      </mj-section>
+      <mj-section padding-top="0">
+
+        <mj-column>
+          <mj-text>
+            <h2> Nice to meet you!</h2>
+            <p>
+              I'm Clara van Opdorp, and I create brilliant experiences that helps you get the best from your ideas
+              and
+              business by developing websites that suits your needs and market.
+            </p>
+            <p>
+              Thanks for reaching out, I'm looking forward to having a look at your proposal.
+              As soon as I've read through it, I'll contact you.
+            </p>
+          </mj-text>
+
+          <mj-image src="https://live.staticflickr.com/5167/5340309206_e592a0c4c3_b.jpg" alt="typing cat"/>
+          <mj-text>
+
+            <p>
+              Kind regards,
+            </p>
+            <br/>
+            <p>
+              Clara van Opdorp<br/>
+              web developer
+            </p>
+          </mj-text>
+
+        </mj-column>
+      </mj-section>
+    </mj-body>
+  </mjml>
+{% endmjml %}
