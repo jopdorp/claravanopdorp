@@ -82,10 +82,6 @@ h1 {
     box-shadow: none;
 }
 
-.navbar-nav:not(.show) .navbar-nav, .navbar-nav:not(.collapsing) .navbar-nav  {
-    margin-left: -35px;
-}
-
 .show .navbar-nav, .collapsing .navbar-nav  {
     padding-right: 4px;
 }
