@@ -26,7 +26,7 @@ h1 {
 
 .navbar {
     padding-bottom: 40px;
-    background-color: white;
+    background: none;
     z-index: 10;
 }
 .navbar-nav  {
@@ -83,6 +83,12 @@ h1 {
 
 .show .nav-item, .collapsing .nav-item {
     margin-left: auto;
+}
+
+.navbar .nav-link {
+    background: white;
+    box-shadow: white 0px 0px 7px 9px;
+    border-radius: 20px;
 }
 
 .main-content {
