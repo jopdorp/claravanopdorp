@@ -50,6 +50,7 @@ h1 {
     position: fixed;
     color: black;
     line-height: 45px;
+    background: white;
 }
 
 .navbar-brand .logo-text {
@@ -75,10 +76,10 @@ h1 {
     float: none;
     width: auto;
     margin-top: 0;
+    background-color: transparent;
     border: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-    background: white;
 }
 
 *:not(.show) .navbar-nav, *:not(.collapsing) .navbar-nav  {
