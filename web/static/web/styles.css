@@ -82,7 +82,7 @@ h1 {
     box-shadow: none;
 }
 
-*:not(.show) .navbar-nav, *:not(.collapsing) .navbar-nav  {
+.navbar-nav:not(.show) .navbar-nav, .navbar-nav:not(.collapsing) .navbar-nav  {
     margin-left: -35px;
 }
 
