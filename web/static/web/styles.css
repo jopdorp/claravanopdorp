@@ -134,6 +134,11 @@ h1 {
     width: 100%;
 }
 
+.footer {
+    left: calc(50% - 65px);
+    width: 170px;
+}
+
 .footer .row {
     padding-top: 20px;
     padding-bottom: 20px;
