@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
-
+from web.views import index, robots
+from django.contrib.staticfiles.storage import staticfiles_storage
+from os import listdir
+from pathlib import Path
+from django.views.generic import RedirectView
+from django.urls import include
 
 def get_favicon_paths():
     filenames = listdir(Path(__file__).parent.absolute().__str__() + "/../web/static/web/favicons/")

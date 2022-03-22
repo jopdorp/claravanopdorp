@@ -39,17 +39,18 @@ h1 {
 }
 
 .navbar-brand, .navbar-brand:hover {
+    box-shadow: white 0px 0px 7px 9px;
     font-family: Oranienbaum-Regular;
     font-size: 61px;
     z-index: 20;
-    width: 70px;
-    height: 29px;
+    width: 130px;
+    height: 110px;
     padding-left: 25px;
     padding-top: 29px;
     position: fixed;
     color: black;
     line-height: 45px;
-
+    background: white;
 }
 
 .navbar-brand .logo-text {
@@ -79,6 +80,14 @@ h1 {
     border: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
+}
+
+.show .navbar-nav, .collapsing .navbar-nav  {
+    padding-right: 4px;
+}
+
+.navbar-toggler {
+    background: white;
 }
 
 .show .nav-item, .collapsing .nav-item {

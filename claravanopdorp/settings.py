@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-m1n3f!q7u@tbhh(a_f2sb-jo-nyoamlf0$n1+8yi5^_=lcyz8r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['claravanopdorp.nl', 'jopdorp.pythonanywhere.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['claravanopdorp.com', 'www.claravanopdorp.com', 'jopdorp.pythonanywhere.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -82,12 +82,13 @@ WSGI_APPLICATION = 'claravanopdorp.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
 
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -140,4 +141,3 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'claravanopdorp.projects@gmail.com'
 EMAIL_HOST_PASSWORD = 'silenciobrunoCMJ'
-
