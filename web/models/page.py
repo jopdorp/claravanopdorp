@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
+from django_quill.fields import QuillField
 
 class Page(models.Model):
 
@@ -10,3 +10,15 @@ class Page(models.Model):
 
     def __str__(self):
         return 'Page: ' + self.title
+
+
+class PageSection(models.Model):
+
+    title = models.CharField(max_length=20, default="",blank=True)
+    content = QuillField(blank=True, default=None)
+    page = models.ForeignKey(Page, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return 'PageSection: ' + self.title
+
+

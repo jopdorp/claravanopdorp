@@ -1,7 +1,6 @@
 from django.views.generic.base import TemplateView
-from web.models.page import Page
+from web.models.page import Page, PageSection
 from web.models.footer_section import FooterSection
-from web.models.page_section import PageSection
 
 
 class Home(TemplateView):
