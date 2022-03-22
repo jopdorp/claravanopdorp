@@ -22,8 +22,8 @@
   <div class="container main-content">
     {% if name == "contact" %}
       {% include "contact.jinja2" %}
-{#      we could put an else if here, to check if the view.current_page.path is "works",#}
-{#      if so, we render work.jinja2, which will be in charge of rendering its work_items#}
+    {% elif view.page_path == "work" %}
+      {% include "work.jinja2" %}
     {% else %}
       {%  if view.current_page.content %}
         <div class="row">

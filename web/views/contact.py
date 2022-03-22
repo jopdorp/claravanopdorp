@@ -52,5 +52,6 @@ def contact(request):
     template = loader.get_template('main.jinja2')
     return HttpResponse(template.render({'form': form, 'name': 'contact', 'view': {
         'menu_pages': menu_pages,
-        'footer_sections': footer_sections
+        'footer_sections': footer_sections,
+        'page_path': "contact"
     }}, request))

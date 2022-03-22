@@ -1,0 +1,13 @@
+{% for work in view.works %}
+  <div class="row">
+    <div class="col">
+      {{ work.title }}
+      <a href="{{ work.url }}"><video src="{{ work.video }}" autoplay muted></video> </a>
+      <h2 class="h2">Hier goes name of fist work,when you step hier you will see a list of works and mini displays</h2>
+      <div>
+        Display BIG work
+      </div>
+    </div>
+  </div>
+{% endfor %}
+workiework
