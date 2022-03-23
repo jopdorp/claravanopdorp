@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from web.models.page import Page, PageSection
 from web.models.footer_section import FooterSection
+from web.models.work import Work
 
 
 class PageSectionInline(admin.TabularInline):
@@ -17,4 +18,4 @@ class PageAdmin(admin.ModelAdmin):
 admin.site.register(Page, PageAdmin)
 admin.site.register(PageSection)
 admin.site.register(FooterSection)
-
+admin.site.register(Work)

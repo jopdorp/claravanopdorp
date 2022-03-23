@@ -1,6 +1,7 @@
 from django.views.generic.base import TemplateView
 from web.models.page import Page, PageSection
 from web.models.footer_section import FooterSection
+from web.models.work import Work
 
 
 class Home(TemplateView):
@@ -11,8 +12,7 @@ class Home(TemplateView):
         page_path = kwargs.get('page')
         if page_path == "work":
             self.page_path = page_path
-            #when the model exists, get the works from the database and pass them to the template
-            #self.works = Work.objects.all()
+            self.works = Work.objects.filter(is_published=True)
         elif page_path:
             self.current_page = Page.objects.get(path=page_path)
             self.page_sections = PageSection.objects.filter(page=self.current_page)
