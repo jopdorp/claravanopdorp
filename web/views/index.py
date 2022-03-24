@@ -12,6 +12,7 @@ class Home(TemplateView):
         page_path = kwargs.get('page')
         if page_path == "work":
             self.page_path = page_path
+            #when the model exists, get the works from the database and pass them to the template
             self.works = Work.objects.filter(is_published=True)
         elif page_path:
             self.current_page = Page.objects.get(path=page_path)

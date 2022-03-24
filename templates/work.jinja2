@@ -1,13 +1,11 @@
 {% for work in view.works %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}"/>
+  <h4 class="video">{{ work.title }}</h4> {{ work.content }}
   <div class="row">
     <div class="col">
-      {{ work.title }}
-      <a href="{{ work.url }}"><video src="{{ work.video }}" autoplay muted></video> </a>
-      <h2 class="h2">Hier goes name of fist work,when you step hier you will see a list of works and mini displays</h2>
-      <div>
-        Display BIG work
-      </div>
+      <a href="{{ work.url }}"><video padding= 10px width="100%" src="/media/{{ work.video }}" autoplay muted></video></a>
     </div>
   </div>
 {% endfor %}
-workiework
+

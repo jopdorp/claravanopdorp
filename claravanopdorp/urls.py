@@ -35,7 +35,8 @@ from web.views import index, robots, contact
 from django.contrib.staticfiles.storage import staticfiles_storage
 from os import listdir
 from pathlib import Path
-from django.views.generic import RedirectView
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path("robots.txt", robots.robots_txt),
@@ -45,4 +46,5 @@ urlpatterns = [
     path("contact", contact.contact, name="contact"),
     path('<page>', index.Home.as_view()),
     ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
