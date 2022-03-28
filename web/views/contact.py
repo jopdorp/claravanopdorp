@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.template import loader
 from web.models.footer_section import FooterSection
 from web.models.page import Page
+from web.models.work import Work
 from django.utils.html import strip_tags
 import re
 
@@ -53,5 +54,6 @@ def contact(request):
     return HttpResponse(template.render({'form': form, 'name': 'contact', 'view': {
         'menu_pages': menu_pages,
         'footer_sections': footer_sections,
-        'page_path': "contact"
+        'page_path': "contact",
+        'works': Work.objects.filter(is_published=True)
     }}, request))

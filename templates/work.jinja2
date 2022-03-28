@@ -1,10 +1,10 @@
 {% for work in view.works %}
   {% load static %}
   <link rel="stylesheet" href="{% static 'styles.css' %}"/>
-  <h4 class="video">{{ work.title }}</h4> {{ work.content }}
+  <h4 class="video" id="work-{{ work.title }}">{{ work.title }}</h4> {{ work.content }}
   <div class="row">
     <div class="col">
-      <a href="{{ work.url }}"><video padding= 10px width="100%" src="/media/{{ work.video }}" autoplay muted></video></a>
+      <a href="{{ work.url }}"><video padding= 10px width="100%" src="/media/{{ work.video}}" autoplay muted></video></a>
     </div>
   </div>
 {% endfor %}
