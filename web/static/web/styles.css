@@ -19,6 +19,10 @@ h1 {
   font-size: 3.5rem;
 }
 
+#xwork {
+    padding-top: 8px;
+    padding-bottom: 100px;
+}
 .row {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -26,11 +30,12 @@ h1 {
 
 .navbar {
     padding-bottom: 40px;
-    background: none;
+    background: white;
     z-index: 10;
+
 }
 .navbar-nav  {
-    padding-top: 30px;
+    padding-top: 15px;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -41,12 +46,12 @@ h1 {
 .navbar-brand, .navbar-brand:hover {
     box-shadow: white 0px 0px 7px 9px;
     font-family: Oranienbaum-Regular;
-    font-size: 61px;
+    font-size: 45px;
     z-index: 20;
     width: 130px;
     height: 110px;
-    padding-left: 25px;
-    padding-top: 29px;
+    padding-left: 30px;
+    padding-top: 26px;
     position: fixed;
     color: black;
     line-height: 45px;
@@ -56,7 +61,7 @@ h1 {
 .navbar-brand .logo-text {
     font-family: Prata-Regular;
     font-size: 12px;
-    margin-left: -5px;
+    margin-left: -13px;
 }
 .navbar-expand-sm .navbar-nav {
     min-width: 610px
@@ -99,9 +104,13 @@ h1 {
     box-shadow: white 0px 0px 7px 9px;
     border-radius: 20px;
 }
+.video {
+    padding-top: 130px;
+}
+
 
 .main-content {
-    padding-top: 100px;
+    padding-top:0px;
     padding-bottom: 100px;
     -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 0.5s; /* Firefox < 16 */
@@ -141,11 +150,6 @@ h1 {
 
 .main-content img {
     width: 100%;
-}
-
-.footer {
-    left: calc(50% - 65px);
-    width: 170px;
 }
 
 .footer .row {

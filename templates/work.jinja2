@@ -1,10 +1,10 @@
 {% for work in view.works %}
   {% load static %}
-  <link rel="stylesheet" href="{% static 'styles.css' %}"/>
-  <h4 class="video" id="work-{{ work.title }}">{{ work.title }}</h4> {{ work.content }}
-  <div class="row">
+  <h4 class="video" id="work-{{ work.title }}" style="display: inline-block" >{{ work.title }}. </h4>
+  <h6 id="work-{{ work.content }}" style="display: inline-block">{{ work.content }}</h6>
+  <div class="row" id="xwork">
     <div class="col">
-      <a href="{{ work.url }}"><video padding= 10px width="100%" src="/media/{{ work.video}}" autoplay muted></video></a>
+      <a href="{{ work.url }}"><video width="100%" src="/media/{{ work.video}}" autoplay muted></video></a>
     </div>
   </div>
 {% endfor %}

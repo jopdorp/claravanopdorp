@@ -19,7 +19,9 @@
 
   {% include "menu.jinja2"%}
   <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
-  <div class="container main-content">
+  <div class="container main-content"
+       {% if view.page_path == "work" %}style="padding-top: 0; margin-top: -103px;"{% endif %}
+  >
     {% if name == "contact" %}
       {% include "contact.jinja2" %}
     {% elif view.page_path == "work" %}
