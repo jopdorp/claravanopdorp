@@ -8,7 +8,7 @@
       <ul class="navbar-nav">
         {% for page in view.menu_pages %}
         <li class="nav-item">
-          <a class="nav-link {% if view.current_page.path == page.path %} active{% endif %}" href="{{page.path}}">{{page.title}}</a>
+          <a class="nav-link {% if view.current_page.path == page.path %} active{% endif %}" href="/{{page.path}}">{{page.title}}</a>
         </li>
         {% endfor %}
         <li class="nav-item">
@@ -22,7 +22,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             {% for work in view.works %}
-              <li><a class="dropdown-item" href="/work#work-{{ work.title }}">{{ work.title }}</a></li>
+              <li><a class="dropdown-item" href="/work/{{ work.title }}">{{ work.title }}</a></li>
             {% endfor %}
           </ul>
         </li>

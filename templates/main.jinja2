@@ -24,6 +24,8 @@
   >
     {% if name == "contact" %}
       {% include "contact.jinja2" %}
+    {% elif view.case %}
+      {% include "case.jinja2" %}
     {% elif view.page_path == "work" %}
       {% include "work.jinja2" %}
     {% else %}

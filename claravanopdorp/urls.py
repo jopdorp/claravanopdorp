@@ -42,9 +42,12 @@ urlpatterns = [
     path("robots.txt", robots.robots_txt),
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url="/home"), name="home"),
-] + get_favicon_paths() + [
+]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += get_favicon_paths() + [
     path("contact", contact.contact, name="contact"),
+    path('<page>/<case>', index.Home.as_view()),
     path('<page>', index.Home.as_view()),
     ]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

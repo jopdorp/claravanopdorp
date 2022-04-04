@@ -1,12 +1,9 @@
 from django.db import models
-from django.core.files.storage import FileSystemStorage
-from django.conf import settings
-
-
 
 class Work(models.Model):
 
     title = models.CharField(max_length=30, default="")
+    description = models.TextField(blank=True)
     content = models.TextField(blank=True)
     is_published = models.BooleanField()
     video = models.FileField(default="")

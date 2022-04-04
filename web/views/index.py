@@ -14,6 +14,11 @@ class Home(TemplateView):
         self.works = Work.objects.filter(is_published=True)
 
         try:
+            self.case = Work.objects.get(title=kwargs.get('case'))
+        except Work.DoesNotExist:
+            print("no work found by case name, continuing...")
+
+        try:
             self.current_page = Page.objects.get(path=page_path)
             self.page_sections = PageSection.objects.filter(page=self.current_page)
         except Page.DoesNotExist:
