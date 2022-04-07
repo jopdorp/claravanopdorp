@@ -43,11 +43,16 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url="/home"), name="home"),
 ]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += get_favicon_paths() + [
     path("contact", contact.contact, name="contact"),
+    path('<work>/<case>', index.Home.as_view()),
     path('<page>/<case>', index.Home.as_view()),
     path('<page>', index.Home.as_view()),
     ]
+
+
 

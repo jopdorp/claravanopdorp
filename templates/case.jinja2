@@ -1,8 +1,19 @@
 <div class="row">
   <div class="col">
-    <h1>{{ view.case.title }}</h1>
-    <div>
-      {{ view.case.description }}
-    </div>
+    <h2>{{ view.case.title }}</h2>
+    {% for item in view.work_sections %}
+      <h6>{{ item.reference }}</h6>
+      <br/>
+      {% if item.photo %}
+        <img src="/media/{{ item.photo }}" alt=""/>
+      {% endif %}
+      <h6>{{ item.feet }}</h6>
+      <br/>
+      {{ item.content.html|safe }}
+      <br/>
+    {% endfor %}
+    {% for item in view.tech_icons %}
+      <h2>{{ item.content }}</h2>
+    {% endfor %}
   </div>
 </div>

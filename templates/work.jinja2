@@ -1,7 +1,7 @@
 {% for work in view.works %}
   {% load static %}
-  {{ work.description }}
   <h4 class="video" id="work-{{ work.title }}" style="display: inline-block" >{{ work.title }}. </h4>
+  <h6>{{ work.description }}</h6>
   <h6 id="work-{{ work.content }}" style="display: inline-block">{{ work.content }}</h6>
   <div class="row" id="xwork">
     <div class="col">
