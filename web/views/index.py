@@ -17,6 +17,18 @@ class Home(TemplateView):
 
         try:
             self.case = Work.objects.get(title=kwargs.get('case'))
+
+            self.pref_case = None
+            self.next_case = None
+
+            for i, work in enumerate(self.works):
+                if work.id == self.case.id:
+                    if i > 0:
+                        self.prev_case = self.works[i-1]
+                    if i < len(self.works) - 1:
+                        self.next_case = self.works[i+1]
+                    break
+
             print("work found by case name, continuing...", self.case)
             self.work_sections = self.case.worksection_set.all()
             print("work_sections found by case name, continuing...", self.work_sections)

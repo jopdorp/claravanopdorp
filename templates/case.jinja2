@@ -2,29 +2,52 @@
   <div class="col">
     <h1 style="margin-bottom: 25px">
       {{ view.case.title }}
-      <a href="{{ view.case.github_url }}" target="_blank" class="github-link"><i class="fa-brands center fa-github"></i></a>
+      <a href="{{ view.case.github_url }}" target="_blank" class="github-link"><i
+          class="fa-brands center fa-github"></i></a>
     </h1>
     {% for item in view.work_sections %}
-      {%  if item.reference %}
+      {% if item.reference %}
         <h5 style="margin-bottom: 30px; color:gray">{{ item.reference }}</h5>
         <br/>
       {% endif %}
       {% if item.photo %}
         {% if item.url %}
-          <a href="{{view.item.url}}" target="_blank">
-            <img src="/media/{{ item.photo }}" alt="" style="margin-bottom: 25px" />
+          <a href="{{ view.item.url }}" target="_blank">
+            <img src="/media/{{ item.photo }}" alt="" style="margin-bottom: 25px"/>
           </a>
         {% else %}
-          <img src="/media/{{ item.photo }}" alt="" style="margin-bottom: 25px" />
+          <img src="/media/{{ item.photo }}" alt="" style="margin-bottom: 25px"/>
         {% endif %}
 
       {% endif %}
-      {%  if item.feet %}
-      <h6 style="margin-bottom: 40px; text-align: center; font-size: 15px; color:grey;">{{ item.feet }}</h6>
-      <br/>
+      {% if item.feet %}
+        <h6 style="margin-bottom: 40px; text-align: center; font-size: 15px; color:grey;">{{ item.feet }}</h6>
+        <br/>
       {% endif %}
       <div style="margin-bottom: 50px" class="case-html-content">{{ item.content.html|safe }}</div>
     {% endfor %}
-    {% include "tech_icons.jinja2"%}
+    {% include "tech_icons.jinja2" %}
+
+      <div class="container d-flex justify-content-center">
+        <div class="row casenavigation" style="margin-top:-30px;">
+          <div class="col" >
+              {% if view.prev_case %}
+                <h4> PREV
+                  <a href="/work/{{ view.prev_case.title }}"><div style="margin-bottom: 25px">{{ view.prev_case.title }} <i class="bi bi-chevron-double-left"></i>
+                  </div></a>
+                </h4>
+              {% endif %}
+            </div>
+          <div class="col" >
+              {% if view.next_case %}
+                <h4> NEXT
+                  <a href="/work/{{ view.next_case.title }}"> <div style="margin-bottom: 25px">{{ view.next_case.title }} <i class="bi bi-chevron-double-right"></i>
+                  </div></a>
+                </h4>
+              {% endif %}
+            </div>
+        </div>
+
+      </div>
   </div>
 </div>
