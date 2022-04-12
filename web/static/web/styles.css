@@ -23,7 +23,8 @@ h1 {
     padding-top: 8px;
     padding-bottom: 100px;
 }
-.row {
+
+.row.main-content-row, .row.section {
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -199,6 +200,29 @@ h1 {
 
 .contact-form .mb-3 {
     margin-bottom: 3.5rem
+}
+
+.technology-icon {
+    text-decoration: none;
+    color: black;
+    font-size: 70px;
+    column-width: auto;
+}
+
+.title-technology-icon{
+    color: gray;
+    font-size: 10px;
+    column-width: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.technology-icon .fa-brands {
+    font-style: normal;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    padding: 12px;
 }
 
 @supports (backdrop-filter: blur()) {

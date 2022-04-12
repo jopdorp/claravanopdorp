@@ -13,6 +13,7 @@
   <script src="/static/web/app.js" type="application/javascript"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="/static/web/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css" integrity="sha512-OivR4OdSsE1onDm/i3J3Hpsm5GmOVvr9r49K3jJ0dnsxVzZgaOJ5MfxEAxCyGrzWozL9uJGKz6un3A7L+redIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -25,12 +26,12 @@
     {% if name == "contact" %}
       {% include "contact.jinja2" %}
     {% elif view.case %}
-      {% include "case.jinja2" %}
+      {% include "case.jinja2"%}
     {% elif view.page_path == "work" %}
       {% include "work.jinja2" %}
     {% else %}
       {%  if view.current_page.content %}
-        <div class="row">
+        <div class="row main-content-row">
           <div class="col">
             <div>
               {{ view.current_page.content|safe }}

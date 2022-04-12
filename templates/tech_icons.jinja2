@@ -1,14 +1,12 @@
-<div class="footer fixed-bottom">
+
   <div class="container d-flex justify-content-center">
-  <div class="row">
-    <div class="col mr-auto"></div>
-    {% for icon in tech %}
+  <div class="row technologies">
+    {% for icon in view.tech_icons %}
       <div class="col" >
-        <div>
-          {{ tech.content|safe }}
-        </div>
+        <h6 STYLE="color:grey" class="title-technology-icon">{{ icon.title }}</h6>
+        <a href="{{ icon.url }}" target="_blank" class="technology-icon"><i class="fa-brands center {{ icon.icon_class }}"></i></a>
       </div>
     {% endfor %}
   </div>
   </div>
-</div>
+
