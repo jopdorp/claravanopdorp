@@ -209,6 +209,7 @@ h1 {
     column-width: auto;
 }
 
+
 .title-technology-icon{
     color: gray;
     font-size: 10px;
@@ -219,6 +220,25 @@ h1 {
 
 .technology-icon .fa-brands {
     font-style: normal;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    padding: 12px;
+}
+
+.github-link {
+    text-decoration: none;
+}
+
+.ql-align-center {
+    text-align: center;
+}
+
+.github-link .fa-brands {
+    font-style: normal;
+    color: black;
+    font-size: 25px;
+    column-width: auto;
     text-align: center;
     margin: auto;
     width: 100%;

@@ -1,7 +1,9 @@
 <div class="row" height="100px">
   <div class="col">
-    <h1 style="margin-bottom: 25px">{{ view.case.title }}</h1>
-    <a href="{{ view.case.github_url }}" target="_blank" class="github-icons-icon"><i class="fa-brands center fa-github"></i></a>
+    <h1 style="margin-bottom: 25px">
+      {{ view.case.title }}
+      <a href="{{ view.case.github_url }}" target="_blank" class="github-link"><i class="fa-brands center fa-github"></i></a>
+    </h1>
     {% for item in view.work_sections %}
       {%  if item.reference %}
         <h5 style="margin-bottom: 30px; color:gray">{{ item.reference }}</h5>
@@ -18,10 +20,10 @@
 
       {% endif %}
       {%  if item.feet %}
-      <h6 style="margin-bottom: 40px; text-align: center">{{ item.feet }}</h6>
+      <h6 style="margin-bottom: 40px; text-align: center; font-size: 15px; color:grey;">{{ item.feet }}</h6>
       <br/>
       {% endif %}
-      <div style="margin-bottom: 40px">{{ item.content.html|safe }}</div>
+      <div style="margin-bottom: 50px" class="case-html-content">{{ item.content.html|safe }}</div>
     {% endfor %}
     {% include "tech_icons.jinja2"%}
   </div>
