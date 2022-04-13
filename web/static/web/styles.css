@@ -24,9 +24,20 @@ h1 {
     padding-bottom: 100px;
 }
 
+
 .row.main-content-row, .row.section {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.row.case-navigation {
+    padding-top: 70px;
+    font-style: normal;
+    color: black;
+    column-width: auto;
+    text-align: center;
+    margin: auto;
+    width: 100%;
 }
 
 .navbar {
@@ -238,6 +249,35 @@ h1 {
     font-style: normal;
     color: black;
     font-size: 25px;
+    column-width: auto;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    padding: 12px;
+}
+.bi.bi-chevron-double-left, .bi.bi-chevron-double-right{
+    font-style: normal;
+    color: black;
+    font-size: 60px;
+    column-width: auto;
+    margin: auto;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.bi.bi-chevron-double-left{
+    text-align:right;
+}
+
+bi.bi-chevron-double-right{
+    text-align:left;
+}
+
+.h4-casenav{
+    font-style: normal;
+    color: black;
+    font-size: 30px;
     column-width: auto;
     text-align: center;
     margin: auto;
