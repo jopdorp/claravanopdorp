@@ -38,6 +38,8 @@ h1 {
     text-align: center;
     margin: auto;
     width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 .navbar {
@@ -81,6 +83,11 @@ h1 {
 
 .navbar .container-fluid, .footer .container, .main-content {
     max-width: 870px;
+}
+
+.navbar .container-gocase .container{
+    flex-direction: row;
+
 }
 
 .navbar-toggler {
@@ -215,15 +222,16 @@ h1 {
 
 .technology-icon {
     text-decoration: none;
-    color: black;
-    font-size: 70px;
+    color: darkslategray;
+    font-size: 65px;
     column-width: auto;
 }
 
 
 .title-technology-icon{
     color: gray;
-    font-size: 10px;
+    font-weight: normal;
+    font-size: 12px;
     column-width: auto;
     text-align: center;
     width: 100%;
@@ -235,6 +243,17 @@ h1 {
     margin: auto;
     width: 100%;
     padding: 12px;
+    color: darkgray;
+}
+
+.technology-icon .fa-brands:hover{
+    font-size:75px;
+    transition: 200ms ease-out;
+    color: darkslategray;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 100px;
 }
 
 .github-link {
@@ -247,7 +266,7 @@ h1 {
 
 .github-link .fa-brands {
     font-style: normal;
-    color: black;
+    color: darkgray;
     font-size: 25px;
     column-width: auto;
     text-align: center;
@@ -255,10 +274,21 @@ h1 {
     width: 100%;
     padding: 12px;
 }
+
+.github-link .fa-brands:hover {
+    text-decoration: none;
+    font-size:27px;
+    transition: 200ms ease-out;
+    color: darkslategray;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 100px;
+}
 .bi.bi-chevron-double-left, .bi.bi-chevron-double-right{
     font-style: normal;
-    color: black;
-    font-size: 60px;
+    color: darkslategray;
+    font-size: 40px;
     column-width: auto;
     margin: auto;
     width: 100%;
@@ -266,9 +296,29 @@ h1 {
     text-decoration: none;
 }
 
+
 .bi.bi-chevron-double-left{
     text-align:right;
 }
+
+
+.prev, a:link, a:visited, a:active {
+    text-decoration: none;
+    color: darkgray;
+    transition: all,ls, ease-in;
+    transition-duration: 100ms;
+}
+
+.bi-chevron-double-left:hover, .bi.bi-chevron-double-right:hover{
+    font-size:60px;
+    color: black;
+    transition: 1s ease-in-out;
+}
+
+.prev, a:hover{
+    color: darkslategray;
+}
+
 
 bi.bi-chevron-double-right{
     text-align:left;
@@ -277,12 +327,18 @@ bi.bi-chevron-double-right{
 .h4-casenav{
     font-style: normal;
     color: black;
-    font-size: 30px;
+    font-size: 20px;
     column-width: auto;
     text-align: center;
     margin: auto;
     width: 100%;
     padding: 12px;
+}
+
+@media (max-width: 800px) {
+    .flex-item-right, .flex-item-left {
+        flex: 100%;
+    }
 }
 
 @supports (backdrop-filter: blur()) {

@@ -29,20 +29,21 @@
     {% include "tech_icons.jinja2" %}
 
 
-      <div class="container d-flex justify-content-center">
-        <div class="row case-navigation">
-          <div class="col" >
+      <div class="gocase" style="margin-top: 70px; padding: 5px; justify-items: center;">
+        <div class="container d-flex justify-content-center " style="display: flex;
+  flex-wrap: wrap;">
+          <div class="row" style="margin: 5px">
               {% if view.prev_case %}
-                <h4 style="text-align: right; font-size: 15px;"> PREV
-                  <a href="/work/{{ view.prev_case.title }}"><div style="margin-bottom: 25px; font-size: 30px;"><i class="bi bi-chevron-double-left"></i> {{ view.prev_case.title }}
+                <h4 style="text-align: right; font-size: 14px;"> PREV
+                  <a class="box" href="/work/{{ view.prev_case.title }}"><div style="margin-bottom: 25px; font-size: 20px;"><i class="bi bi-chevron-double-left"></i> {{ view.prev_case.title }}
                   </div></a>
                 </h4>
               {% endif %}
             </div>
-          <div class="col" >
+          <div class="row" style="margin: 5px" >
               {% if view.next_case %}
-                <h4 style="text-align: left; font-size: 15px;" > NEXT
-                  <a href="/work/{{ view.next_case.title }}"> <div style="margin-bottom: 25px; font-size: 30px;">{{ view.next_case.title }} <i class="bi bi-chevron-double-right"></i>
+                <h4 style="text-align: left; font-size: 14px;" > NEXT
+                  <a href="/work/{{ view.next_case.title }}"><div style="margin-bottom: 25px; font-size: 20px;">{{ view.next_case.title }} <i class="bi bi-chevron-double-right"></i>
                   </div></a>
                 </h4>
               {% endif %}
