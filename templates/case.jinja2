@@ -29,21 +29,21 @@
     {% include "tech_icons.jinja2" %}
 
 
-      <div class="gocase" style="margin-top: 70px; padding: 5px; justify-items: center;">
+      <div class="rl" style="margin-top: 70px; padding: 5px; justify-items: center; text-align: center;">
         <div class="container d-flex justify-content-center " style="display: flex;
-  flex-wrap: wrap;">
-          <div class="row" style="margin: 5px">
+  flex-wrap: wrap; border-style: solid; background-color: #FDF8F7; border: 4px solid #fdf5ee; padding: 1.5em; max-width: 95%; margin: 0 auto; border-radius: 20px;">
+          <div class="flex-gol" >
               {% if view.prev_case %}
-                <h4 style="text-align: right; font-size: 14px;"> PREV
-                  <a class="box" href="/work/{{ view.prev_case.title }}"><div style="margin-bottom: 25px; font-size: 20px;"><i class="bi bi-chevron-double-left"></i> {{ view.prev_case.title }}
+                <h4 style="text-align: center; font-size: 14px;"> PREV
+                  <a class="box" href="/work/{{ view.prev_case.title }}"><div class="flex-gol">{{ view.prev_case.title }}
                   </div></a>
                 </h4>
               {% endif %}
             </div>
-          <div class="row" style="margin: 5px" >
+          <div class="flex-gor" >
               {% if view.next_case %}
-                <h4 style="text-align: left; font-size: 14px;" > NEXT
-                  <a href="/work/{{ view.next_case.title }}"><div style="margin-bottom: 25px; font-size: 20px;">{{ view.next_case.title }} <i class="bi bi-chevron-double-right"></i>
+                <h4 style="text-align: center; font-size: 14px;" > NEXT
+                  <a href="/work/{{ view.next_case.title }}"><div class="flex-gor">{{ view.next_case.title }}
                   </div></a>
                 </h4>
               {% endif %}
@@ -51,5 +51,13 @@
         </div>
 
       </div>
+   <footer>
+     <div class="container">
+       <h3 class="c-footer-title">I occasionally take on freelance opportunities.</h3>
+       <p class="c-footer-text">Have an exciting project where you need some help?
+         Send me over a message, and let's chat.</p>
+
+     </div>
+   </footer>
   </div>
 </div>

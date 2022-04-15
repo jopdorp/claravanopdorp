@@ -42,6 +42,46 @@ h1 {
     flex-direction: row;
 }
 
+.flex-gol{
+    text-align: center;
+}
+
+.flex-gor{
+    text-align: center;
+}
+
+.flex-gor, .flex-gol{
+    padding: 7px;
+    flex: 50%;
+    font-size: 32px;
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    line-height: 120%;
+}
+.flex-gor:hover, .flex-gol:hover{
+    color: darkslategray;
+    font-weight: 900;
+    line-height: 120%;
+}
+
+@media (max-width: 600px) {
+    .flex-gor, .flex-gol {
+        flex: 100%;
+        font-size: 30px;
+        text-align: center;
+    }
+    .flex-gol.h4 {
+        text-align: left;
+
+    }
+    .flex-gor.h4{
+        text-align: left;
+
+    }
+}
+
+
 .navbar {
     padding-bottom: 40px;
     background: white;
@@ -85,7 +125,7 @@ h1 {
     max-width: 870px;
 }
 
-.navbar .container-gocase .container{
+.rl {
     flex-direction: row;
 
 }
@@ -285,44 +325,19 @@ h1 {
     border-color: black;
     border-radius: 100px;
 }
-.bi.bi-chevron-double-left, .bi.bi-chevron-double-right{
-    font-style: normal;
-    color: darkslategray;
-    font-size: 40px;
-    column-width: auto;
-    margin: auto;
-    width: 100%;
-    padding: 12px;
-    text-decoration: none;
-}
-
-
-.bi.bi-chevron-double-left{
-    text-align:right;
-}
 
 
 .prev, a:link, a:visited, a:active {
-    text-decoration: none;
     color: darkgray;
     transition: all,ls, ease-in;
     transition-duration: 100ms;
 }
 
-.bi-chevron-double-left:hover, .bi.bi-chevron-double-right:hover{
-    font-size:60px;
-    color: black;
-    transition: 1s ease-in-out;
-}
 
 .prev, a:hover{
     color: darkslategray;
 }
 
-
-bi.bi-chevron-double-right{
-    text-align:left;
-}
 
 .h4-casenav{
     font-style: normal;
@@ -335,11 +350,6 @@ bi.bi-chevron-double-right{
     padding: 12px;
 }
 
-@media (max-width: 800px) {
-    .flex-item-right, .flex-item-left {
-        flex: 100%;
-    }
-}
 
 @supports (backdrop-filter: blur()) {
     .footer .col div {
