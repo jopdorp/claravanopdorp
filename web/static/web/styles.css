@@ -9,12 +9,19 @@
 }
 
 h1,h2,h3, .navbar {
-    font-family: Prata-Regular;
+  font-family: Prata-Regular;
 }
 
 body {
+  --background-color: white;
   font-family: Roboto, sans-serif;
+  background: var(--background-color);
 }
+
+body.case-colors {
+  --background-color:#fefaf6;
+}
+
 h1 {
   font-size: 3.5rem;
 }
@@ -53,16 +60,17 @@ h1 {
 .flex-gor, .flex-gol{
     padding: 7px;
     flex: 50%;
-    font-size: 32px;
+    font-size: 35px;
     text-align: center;
     color: black;
     font-weight: 500;
     line-height: 120%;
 }
 .flex-gor:hover, .flex-gol:hover{
-    color: darkslategray;
-    font-weight: 900;
+    color: pink;
+    font-weight: 400;
     line-height: 120%;
+    font-size: 36px;
 }
 
 @media (max-width: 600px) {
@@ -81,10 +89,90 @@ h1 {
     }
 }
 
+.c-footer{
+    position: relative;
+    z-index: 10;
+}
+
+.c-footer-contain{
+     margin: 0 auto;
+ }
+
+
+
+@media (min-width: 992px){
+    .c-footer-title {
+        font-size: 64px;
+        letter-spacing: -2px;
+    }
+}
+
+.c-footer__title {
+    font-size: 35px;
+    line-height: 120%;
+    letter-spacing: -1.5px;
+    color: #232320;
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.c-footer-text{
+    margin-top: 1em;
+    font-size: 18px;
+    line-height: 32px;
+    color: #656270;
+    position: relative;
+    z-index: 100;
+    text-align: center;
+}
+@media (min-width: 992px) {
+    .c-footer-contain {
+        padding: 14em 0;
+        max-width: 790px;
+    }
+}
+
+@media (min-width: 768px) {
+    .u-bot {
+        display: block !important;
+    }
+}
+
+.c-footer-link {
+    text-emphasis-color: black;
+    color: black;
+    display: inline-block;
+    transition: none;
+    text-decoration-line: underline;
+    text-decoration-color: pink;
+    text-decoration-thickness:3px;
+}
+
+.c-footer-link, .c-footer-link span{
+    position: relative;
+    z-index: 10;
+}
+
+.c-footer-link:hover {
+    transition: all .2s ease-in-out;
+    text-decoration-thickness:5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.c-footer-link {
+    color: #656270;
+    display: inline-block;
+    transition: all .2s ease-in-out;
+}
 
 .navbar {
     padding-bottom: 40px;
-    background: white;
+    background: var(--background-color);
     z-index: 10;
 
 }
@@ -98,7 +186,7 @@ h1 {
 }
 
 .navbar-brand, .navbar-brand:hover {
-    box-shadow: white 0px 0px 7px 9px;
+    box-shadow: var(--background-color) 0px 0px 7px 9px;
     font-family: Oranienbaum-Regular;
     font-size: 45px;
     z-index: 20;
@@ -109,7 +197,7 @@ h1 {
     position: fixed;
     color: black;
     line-height: 45px;
-    background: white;
+    background: var(--background-color);
 }
 
 .navbar-brand .logo-text {
@@ -125,9 +213,25 @@ h1 {
     max-width: 870px;
 }
 
-.rl {
+.flex-technologies {
+    column-width: auto;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
 
+@media (max-width: 600px)  {
+    .flex-technologies {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
 }
 
 .navbar-toggler {
@@ -151,7 +255,7 @@ h1 {
 }
 
 .navbar-toggler {
-    background: white;
+    background: var(--background-color);
 }
 
 .show .nav-item, .collapsing .nav-item {
@@ -159,8 +263,8 @@ h1 {
 }
 
 .navbar .nav-link {
-    background: white;
-    box-shadow: white 0px 0px 7px 9px;
+    background: var(--background-color);
+    box-shadow: var(--background-color) 0px 0px 7px 9px;
     border-radius: 20px;
 }
 .video {
@@ -283,17 +387,20 @@ h1 {
     margin: auto;
     width: 100%;
     padding: 12px;
-    color: darkgray;
+    color: darkslategray;
 }
 
 .technology-icon .fa-brands:hover{
     font-size:75px;
     transition: 200ms ease-out;
-    color: darkslategray;
+    color: pink;
     border-style: solid;
     border-width: 2px;
-    border-color: black;
+    border-color: pink;
     border-radius: 100px;
+}
+.technology-icon .fa-brands:hover .title-technology-icon:hover{
+    color: pink;
 }
 
 .github-link {
@@ -306,7 +413,7 @@ h1 {
 
 .github-link .fa-brands {
     font-style: normal;
-    color: darkgray;
+    color: darkslategray;
     font-size: 25px;
     column-width: auto;
     text-align: center;
@@ -319,16 +426,16 @@ h1 {
     text-decoration: none;
     font-size:27px;
     transition: 200ms ease-out;
-    color: darkslategray;
+    color: pink;
     border-style: solid;
     border-width: 2px;
-    border-color: black;
+    border-color: pink;
     border-radius: 100px;
 }
 
 
 .prev, a:link, a:visited, a:active {
-    color: darkgray;
+    color: #120111;
     transition: all,ls, ease-in;
     transition-duration: 100ms;
 }
@@ -359,6 +466,6 @@ h1 {
 
 @supports not (backdrop-filter: blur()) {
     .footer .col div {
-        background: white;
+        background: var(--background-color);
     }
 }

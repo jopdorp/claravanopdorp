@@ -34,7 +34,7 @@
   flex-wrap: wrap; border-style: solid; background-color: #FDF8F7; border: 4px solid #fdf5ee; padding: 1.5em; max-width: 95%; margin: 0 auto; border-radius: 20px;">
           <div class="flex-gol" >
               {% if view.prev_case %}
-                <h4 style="text-align: center; font-size: 14px;"> PREV
+                <h4 style="text-align: center; font-size: 14px;LINE-HEIGHT: 3;font-size: 14px; FONT-WEIGHT: 600;COLOR: GRAY;"> PREV
                   <a class="box" href="/work/{{ view.prev_case.title }}"><div class="flex-gol">{{ view.prev_case.title }}
                   </div></a>
                 </h4>
@@ -42,7 +42,7 @@
             </div>
           <div class="flex-gor" >
               {% if view.next_case %}
-                <h4 style="text-align: center; font-size: 14px;" > NEXT
+                <h4 style="text-align: center; font-size: 14px;LINE-HEIGHT: 3;font-size: 14px; FONT-WEIGHT: 600;COLOR: GRAY;" > NEXT
                   <a href="/work/{{ view.next_case.title }}"><div class="flex-gor">{{ view.next_case.title }}
                   </div></a>
                 </h4>
@@ -51,12 +51,17 @@
         </div>
 
       </div>
-   <footer>
-     <div class="container">
+   <footer class="c-footer">
+     <div class="c-footer contain" style="padding-top: 180px; text-align: center">
        <h3 class="c-footer-title">I occasionally take on freelance opportunities.</h3>
        <p class="c-footer-text">Have an exciting project where you need some help?
-         Send me over a message, and let's chat.</p>
-
+         <span class="u-bot"> Send me over a message, and
+           <a href="contact.jinja2" class="c-footer-link">
+             <span>  let's chat</span>
+           </a>
+           .
+         </span>
+       </p>
      </div>
    </footer>
   </div>
