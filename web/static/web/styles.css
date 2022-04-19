@@ -20,7 +20,10 @@ body {
 
 body.case-colors {
   --background-color:#fefaf6;
+    background: linear-gradient(6deg,#dacdff 1%,rgba(218,205,255,0) 17%),#ffeaee;
+    background-color: rgb(255, 234, 238);
 }
+
 
 h1 {
   font-size: 3.5rem;
@@ -213,16 +216,6 @@ h1 {
     max-width: 870px;
 }
 
-.flex-technologies {
-    column-width: auto;
-    padding: 10px;
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 
 @media (max-width: 600px)  {
     .flex-technologies {
@@ -367,40 +360,80 @@ h1 {
 .technology-icon {
     text-decoration: none;
     color: darkslategray;
-    font-size: 65px;
+    font-size: 40px;
     column-width: auto;
+    border:2px;
+    border-color: transparent;
+    border-widh: 2px;
+    border-style: solid;
+    position: absolute;
+    text-align: center;
+}
+
+.flex-technologies{
+    display: flex;
+}
+
+.flex-technologies-container{
+    border-widh: 1px;
+    position: relative;
+    height: 140px;
+    width: 125px;
+    border-style: solid;
+    border-color: transparent;
+    display: flex;
+}
+
+.flex-hub-container{
+    border-widh: 1px;
+    position: relative;
+    height: 140px;
+    width: 125px;
+    border-style: solid;
+    border-color: transparent;
+    display: flex;
+
 }
 
 
 .title-technology-icon{
-    color: gray;
-    font-weight: normal;
-    font-size: 12px;
+    color: transparent;
+    font-weight: bold;
+    font-size: 10px;
     column-width: auto;
     text-align: center;
     width: 100%;
+    position: absolute;
 }
 
 .technology-icon .fa-brands {
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
     font-style: normal;
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    padding: 12px;
+    font-size: 65px;
+    width: 94px;
+    height: 94px;
     color: darkslategray;
+    position: absolute;
+    margin-left: 16px;
+    margin-top: 23px;
 }
 
-.technology-icon .fa-brands:hover{
-    font-size:75px;
-    transition: 200ms ease-out;
+.flex-technologies-container:hover .title-technology-icon{
+    color: pink;
+    transform: scale(1.2,1.2);
+}
+
+
+.flex-technologies-container:hover .technology-icon .fa-brands {
     color: pink;
     border-style: solid;
     border-width: 2px;
     border-color: pink;
+    transform: scale(1.2,1.2);
     border-radius: 100px;
-}
-.technology-icon .fa-brands:hover .title-technology-icon:hover{
-    color: pink;
+    transition: 200ms step-start;
 }
 
 .github-link {
