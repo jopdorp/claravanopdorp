@@ -1,36 +1,18 @@
+{% for page in view.menu_pages %}
+  <a class=" {% if view.current_page.path == page.path %} active{% endif %}" href="/{{page.path}}">
+    <div class="button-menu"><span>{{page.title}}</span>
+    </div></a>
+{% endfor %}
 
-<nav class="navbar fixed-top navbar-expand-md navbar-light sticky-top fixed-top">
-  <div class="container-fluid">
-    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav">
-        {% for page in view.menu_pages %}
-        <li class="nav-item">
-          <a class="nav-link {% if view.current_page.path == page.path %} active{% endif %}" href="/{{page.path}}">{{page.title}}</a>
-        </li>
-        {% endfor %}
-        <li class="nav-item">
-          <a class="nav-link {% if view.page_path == 'contact' %} active{% endif %}" href="/contact">Contact</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a {% if view.page_path == 'work' %} active{% endif %} class="nav-link dropdown-toggle" href="/work"
-                                               id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                                               aria-expanded="false">
-            Work
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            {% for work in view.works %}
-              <li><a class="dropdown-item" href="/work/{{ work.title }}">{{ work.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <a class="navbar-brand "  href="/home">
-    <div>CvO</div>
-    <div class="logo-text">Clara van Opdorp</div>
-  </a>
-</nav>
+<a class="{% if view.page_path == 'contact' %} active{% endif %}" href="/contact">
+  <div class="button-contact"><span>Contact</span>
+  </div></a>
+
+
+<a class="{% if view.page_path == 'work' %} active{% endif %}" href="/work">
+  <div class="button-work"><span>Work</span>
+  </div></a>
+
+<a class="navbar-brand "  href="/home">
+  <div class="logo-text">Home</div>
+</a>

@@ -1,14 +1,19 @@
-<div class="footer fixed-bottom">
-  <div class="container d-flex justify-content-center">
-    <div class="row">
-        <div class="col mr-auto"></div>
+<div style="  position: fixed;
+    margin-top: calc(var(--base-padding) - var(--top-counter));
+    right: var(--base-padding-lr);
+    z-index: 53;
+    --base-padding: 14px;
+    --base-padding-lr: 18px;
+    --top-counter: 2px;
+    margin-top: -20px;
+" class="row">
+  <ul class="flex-social" style="display: flex">
 {% for footer_section in view.footer_sections %}
-        <div class="col">
+        <div class="li" style="padding: 10px">
             <div>
                 {{ footer_section.content|safe }}
             </div>
         </div>
 {% endfor %}
-    </div>
-  </div>
+  </ul>
 </div>

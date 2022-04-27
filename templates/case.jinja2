@@ -20,15 +20,20 @@
         {% endif %}
 
       {% endif %}
+      </div>
+      <div class="dos-section">
       {% if item.feet %}
         <h6 style="margin-bottom: 40px; text-align: center; font-size: 15px; color:grey;">{{ item.feet }}</h6>
         <br/>
       {% endif %}
       <div style="margin-bottom: 50px" class="case-html-content">{{ item.content.html|safe }}</div>
     {% endfor %}
+      </div>
+    <div class="tres-section">
     {% include "tech_icons.jinja2" %}
+    </div>
 
-
+    <div class="tro-section">
       <div class="rl" style="margin-top: 70px; padding: 5px; justify-items: center; text-align: center;">
         <div class="container d-flex justify-content-center " style="display: flex;
   flex-wrap: wrap; border-style: solid; background-color: #FDF8F7; border: 4px solid #fdf5ee; padding: 1.5em; max-width: 95%; margin: 0 auto; border-radius: 20px;">
@@ -49,8 +54,9 @@
               {% endif %}
             </div>
         </div>
-
       </div>
+
+
    <footer class="c-footer">
      <div class="c-footer contain" style="padding-top: 180px; text-align: center">
        <h3 class="c-footer-title">I occasionally take on freelance opportunities.</h3>
@@ -66,3 +72,4 @@
    </footer>
   </div>
 </div>
+
