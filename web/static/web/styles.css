@@ -19,8 +19,8 @@ body {
 }
 
 body.case-colors {
-  --background-color:#fefaf6;
-    background: linear-gradient(6deg,#dacdff 1%,rgba(218,205,255,0) 17%),#ffeaee;
+  --background-color:#ffeaee;
+    background: linear-gradient(0deg,#dacdff 2%, #ffeaee 20%, #ffeaee 30%,  #fadeff 70%,  #fbf0fc 80%,#ffeaee 90%),#ffeaee;
     background-color: rgb(255, 234, 238);
 }
 
@@ -260,10 +260,17 @@ h1 {
     box-shadow: var(--background-color) 0px 0px 7px 9px;
     border-radius: 20px;
 }
-.video {
+.work {
     padding-top: 130px;
 }
 
+.work-video:hover {
+    filter: brightness(30%);
+    content: "read more";
+}
+.work-video:hover::after {
+    content: "read more";
+}
 
 .main-content {
     padding-top:0px;
