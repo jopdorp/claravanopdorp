@@ -471,11 +471,19 @@ h1 {
     font-style: normal;
     color: darkslategray;
     font-size: 25px;
-    width: 100%;
+    width: 40px;
     padding: 12px;
-    margin-top: 130px;
-    margin-left: 610px;
+    margin-top: -40px;
+    margin-left: 780px;
     position: absolute;
+    justify-content: center;
+    text-align: center;
+}
+
+.external-link .bi-box-arrow-up-right:hover{
+    text-decoration: none;
+    transition: 200ms ease-out;
+    color: hotpink;
 }
 
 .prev, a:link, a:visited, a:active {
