@@ -82,14 +82,7 @@ h1 {
         font-size: 30px;
         text-align: center;
     }
-    .flex-gol.h4 {
-        text-align: left;
 
-    }
-    .flex-gor.h4{
-        text-align: left;
-
-    }
 }
 
 .c-footer{
@@ -127,7 +120,7 @@ h1 {
     margin-top: 1em;
     font-size: 18px;
     line-height: 32px;
-    color: #656270;
+    color: #3E373D ;
     position: relative;
     z-index: 100;
     text-align: center;
@@ -409,6 +402,7 @@ h1 {
     font-size: 10px;
     column-width: auto;
     text-align: center;
+    margin-left: 6px;
     width: 100%;
     position: absolute;
 }
@@ -421,7 +415,7 @@ h1 {
     font-size: 65px;
     width: 94px;
     height: 94px;
-    color: darkslategray;
+    color: #3b243d;
     position: absolute;
     margin-left: 16px;
     margin-top: 23px;
@@ -466,13 +460,23 @@ h1 {
     text-decoration: none;
     font-size:27px;
     transition: 200ms ease-out;
-    color: pink;
+    color: hotpink;
     border-style: solid;
     border-width: 2px;
-    border-color: pink;
+    border-color: hotpink;
     border-radius: 100px;
 }
 
+.external-link .bi-box-arrow-up-right{
+    font-style: normal;
+    color: darkslategray;
+    font-size: 25px;
+    width: 100%;
+    padding: 12px;
+    margin-top: 130px;
+    margin-left: 610px;
+    position: absolute;
+}
 
 .prev, a:link, a:visited, a:active {
     color: #120111;

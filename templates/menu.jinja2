@@ -14,17 +14,15 @@
         <li class="nav-item">
           <a class="nav-link {% if view.page_path == 'contact' %} active{% endif %}" href="/contact">Contact</a>
         </li>
-        <li class="nav-item dropdown">
-          <a {% if view.page_path == 'work' %} active{% endif %} class="nav-link dropdown-toggle" href="/work"
-                                               id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                                               aria-expanded="false">
-            Work
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            {% for work in view.works %}
-              <li><a class="dropdown-item" href="/work/{{ work.title }}">{{ work.title }}</a></li>
-            {% endfor %}
-          </ul>
+{#        <li class="nav-item dropdown">#}
+        <li class="nav-item">
+          <a class="nav-link {% if view.page_path == 'work' %} active{% endif %}" href="/work">Work</a>
+{#          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+{#            {% for work in view.works %}#}
+{#              <li><a class="dropdown-item" href="/work/{{ work.title }}">{{ work.title }}</a></li>#}
+{#            {% endfor %}#}
+{#          </ul>#}
+{#        </li>#}
         </li>
       </ul>
     </div>

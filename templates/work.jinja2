@@ -1,11 +1,12 @@
 {% for work in view.works %}
   {% load static %}
   <h4 class="work" id="work-{{ work.title }}" style="display: inline-block" >{{ work.title }}. </h4>
+  <a href="{{ view.case.github_url }}" target="_blank" class="external-link"><i class="bi bi-box-arrow-up-right"></i></a>
   <h6>{{ work.description }}</h6>
   <h6 id="work-{{ work.content }}" style="display: inline-block">{{ work.content }}</h6>
   <div class="row" id="xwork">
     <div class="col">
-      <a href="{{ work.url }}"><video class="work-video" width="100%" src="/media/{{ work.video}}" autoplay muted></video></a>
+      <a href="{{ work.url }}" target="_blank"><video class="work-video" width="100%" src="/media/{{ work.video}}" autoplay muted></video></a>
     </div>
   </div>
 {% endfor %}
