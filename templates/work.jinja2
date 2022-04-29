@@ -7,9 +7,14 @@
   <a href="{{ work.url }}" target="_blank" class="external-link"><i class="bi bi-box-arrow-up-right"></i></a>
   <h6>{{ work.description }}</h6>
   <h6 id="work-{{ work.content }}" style="display: inline-block">{{ work.content }}</h6>
-  <div class="row" id="xwork">
-    <div class="col">
-      <a href="/work/{{ work.title }}"><video class="work-video" width="100%" src="/media/{{ work.video}}" autoplay muted></video></a>
+  <div class="row">
+    <div class="col" >
+      <div class="xwork">
+        <a href="/work/{{ work.title }}"><video class="work-video" width="100%" src="/media/{{ work.video}}" autoplay muted></video></a>
+        <div class="fadedbox" style="width: 100%">
+          <div class="fadedtitle fadedtext">Check Project</div>
+        </div>
+      </div>
     </div>
   </div>
   </div>

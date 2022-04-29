@@ -257,13 +257,61 @@ h1 {
     padding-top: 130px;
 }
 
-.work-video:hover {
-    filter: brightness(30%);
-    content: "read more";
+
+.xwork{
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
 }
-.work-video:hover::after {
-    content: "read more";
+
+.fadedbox{
+    background-color: #666666;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    color: #fff;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    opacity:0;
+    width: 100%;
+    height: 100%;
+    padding: 130px 20px;
 }
+
+.xwork:hover .fadedbox {
+    opacity: 0.8;
+}
+
+.xwork .fadedtext {
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+}
+
+.xwork .fadedtitle {
+    font-size: 7em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition-delay: 0.2s;
+    transition-duration: 0.3s;
+}
+
+.xwork:hover .fadedtitle,
+.xwork:focus .fadedtitle {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+}
+
 
 .main-content {
     padding-top:0px;
@@ -444,6 +492,11 @@ h1 {
 .ql-align-center {
     text-align: center;
 }
+
+#hide{
+    display: none;
+}
+
 
 .github-link .fa-brands {
     font-style: normal;
