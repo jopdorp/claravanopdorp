@@ -1,31 +1,32 @@
 {% for work in view.works %}
   {% load static %}
-    <div class="flex-work" style="display:flex; position: relative">
+  <div class="flex-work" style="display:flex; position: relative" data-color="{{ work.color }}">
     <div class="row">
-      <h4 class="work" id="work-{{ work.title }}" style="display: inline-block" >{{ work.title }}. </h4>
+      <h4 class="work" id="work-{{ work.title }}" style="display: inline-block">{{ work.title }}. </h4>
       <div class="flex-launch container" style=" --bs-gutter-x: 5.5rem; margin-top: -35px">
         <div class="row" style="--bs-gutter-x: 0.6rem">
           <div class="col xpace" style="flex-grow: 100"></div>
-          <div class="launch-text col"><a href="{{ work.url }}" target="_blank" class="external-link">Open Website</a></div>
-          <div class="col" style="text-align: right"><a href="{{ work.url }}" target="_blank" class="external-link"><i class="bi bi-box-arrow-up-right"></i></a></div>
+          <div class="launch-text col"><a href="{{ work.url }}" target="_blank" class="external-link">Open Website</a>
+          </div>
+          <div class="col" style="text-align: right"><a href="{{ work.url }}" target="_blank" class="external-link"><i
+              class="bi bi-box-arrow-up-right"></i></a></div>
         </div>
       </div>
       <h6>{{ work.description }}</h6>
-      <h6 id="work-{{ work.content }}" style="display: inline-block">{{ work.content }}</h6>
+      <h6 style="display: inline-block">{{ work.content }}</h6>
       <div class="row">
-        <div class="col" >
+        <div class="col">
           <div class="xwork">
-            <a href="/work/{{ work.title }}"><video class="work-video" width="100%" src="/media/{{ work.video}}" autoplay muted></video></a>
+            <a href="/work/{{ work.title }}">
+              <video class="work-video" width="100%" src="/media/{{ work.video }}" autoplay muted></video>
+            </a>
             <a href="/work/{{ work.title }}" class="fadedbox" style="width: 100%">
               <div class="fadedtitle fadedtext">Project Details</div>
             </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
-    </div>
-    </div>
-
-
 {% endfor %}
 

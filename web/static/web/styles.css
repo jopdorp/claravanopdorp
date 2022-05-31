@@ -13,33 +13,19 @@ h1,h2,h3, .navbar {
 }
 
 body {
-  --background-color: white;
-  font-family: Roboto, sans-serif;
-  background: var(--background-color);
-  transition: background-color 1s ease;
+    --background-color: white;
+    font-family: Roboto, sans-serif;
+    background: var(--background-color);
+    transition: background-color 1s ease;
+    overscroll-behavior: none;
 }
 
 body.case-colors {
-  --background-color:#FDF8F7;
-    background: linear-gradient(0deg,#dacdff 1%, #ffeaee 20%, #ffeaee 30%,  #fdf5ee 70%,  #fdf5ee 80%,#FDF8F7 90%),#FDF8F7;
+    --background-color: #FDF8F7;
+    background: linear-gradient(0deg, #dacdff 1%, #ffeaee 20%, #ffeaee 30%, #fdf5ee 70%, #fdf5ee 80%, #FDF8F7 90%), #FDF8F7;
     background-color: #FDF8F7;
 }
 
-
-
-.panel {
-    /* min height incase content is higher than window height */
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* outline: 10px solid hotpink; */
-    /* turn above on to see the edge of panels */
-}
-
-.color-violet {
-    background-color: #7A4EAB;
-}
 
 h1 {
   font-size: 3.5rem;
@@ -186,6 +172,7 @@ h1 {
     padding-bottom: 32px;
     background: var(--background-color);
     z-index: 10;
+    transition: background-color 1s ease;
 }
 .navbar-nav  {
     padding-top: 15px;
@@ -260,11 +247,12 @@ h1 {
 .show .nav-item, .collapsing .nav-item {
     margin-left: auto;
 }
+.nav-item, .nav-item .nav-link {
+    transition: background-color 1s ease;
+}
 
 .navbar .nav-link {
     background: var(--background-color);
-    box-shadow: var(--background-color) 0px 0px 7px 9px;
-    border-radius: 20px;
 }
 .work {
     padding-top: 130px;

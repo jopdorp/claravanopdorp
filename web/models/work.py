@@ -4,6 +4,7 @@ from django_quill.fields import QuillField
 
 class Work(models.Model):
 
+    color = models.CharField(max_length=7, default="#FFFFFF")
     title = models.CharField(max_length=30, default="")
     description = models.CharField(max_length=500, default="",blank=True)
     content = models.TextField(blank=True)
