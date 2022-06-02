@@ -51,6 +51,7 @@ urlpatterns += get_favicon_paths() + [
     path("contact", contact.contact, name="contact"),
     path('<work>/<case>', index.Home.as_view()),
     path('<page>/<case>', index.Home.as_view()),
+    path('<page>/<about>', index.Home.as_view()),
     path('<page>', index.Home.as_view()),
     ]
 

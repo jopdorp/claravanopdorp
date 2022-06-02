@@ -22,14 +22,15 @@
   {% include "menu.jinja2"%}
   <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
   <div class="container main-content"
-       {% if view.page_path == "work" %}style="padding-top: 0; margin-top: -103px;"{% endif %}
-  >
+       {% if view.page_path == "work" %}style="padding-top: 0; margin-top: -103px;"{% endif %}>
     {% if name == "contact" %}
       {% include "contact.jinja2" %}
     {% elif view.case %}
       {% include "case.jinja2"%}
     {% elif view.page_path == "work" %}
       {% include "work.jinja2" %}
+    {% elif view.page_path == "about" %}
+      {% include "about.jinja2" %}
     {% else %}
       {%  if view.current_page.content %}
         <div class="row main-content-row">
@@ -44,11 +45,7 @@
         {% include "section.jinja2" %}
       {% endfor %}
     {% endif %}
-
-
-
   </div>
-
 
   {% include "footer.jinja2" %}
 </body>

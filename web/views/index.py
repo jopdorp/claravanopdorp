@@ -2,7 +2,8 @@ from django.views.generic.base import TemplateView
 from web.models.page import Page, PageSection
 from web.models.footer_section import FooterSection
 from web.models.work import Work, WorkSection
-from web.models.tech import TechnologyIcons
+from web.models.tech import TechnologyIcons, TechnologyIconsAbout
+from web.models.about import About, AboutSection
 
 
 class Home(TemplateView):
@@ -40,12 +41,22 @@ class Home(TemplateView):
             print("no work section found, continuing...")
 
         try:
+            self.about = About.objects.all()
+            print("about page found", self.about)
+            self.about_sections = AboutSection.objects.all()
+            self.tech_icons_about = TechnologyIconsAbout.objects.all()
+        except TechnologyIconsAbout.DoesNotExist:
+            print("no technology icon found in about, continuing...")
+
+        try:
             self.current_page = Page.objects.get(path=page_path)
             print("current page found", self.current_page)
             self.page_sections = PageSection.objects.filter(page=self.current_page)
             print("page sections", self.page_sections)
         except Page.DoesNotExist:
             print("no page found, continuing...")
+
+
 
         self.menu_pages = Page.objects.filter(is_in_menu=True)
         self.footer_sections = FooterSection.objects.all()
