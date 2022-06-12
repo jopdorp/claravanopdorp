@@ -12,7 +12,7 @@
       {% endif %}
       {% if item.photo %}
         {% if item.url %}
-          <a href="{{ view.item.url }}" target="_blank">
+          <a href="{{ item.url }}" target="_blank">
             <img src="/media/{{ item.photo }}" alt="" style="margin-bottom: 25px"/>
           </a>
         {% else %}
